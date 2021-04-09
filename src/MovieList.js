@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Movie from "./Movie";
 
 const MovieList = () => {
     const [movies, setMovies] = useState([
@@ -19,9 +20,12 @@ const MovieList = () => {
         }
 
     ]);
-
     return (
-
+        <>
+        {movies.map(movie => (
+            <Movie name={movie.name} />
+            ))}
+        </>
     );
 }
 
